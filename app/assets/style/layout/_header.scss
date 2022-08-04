@@ -1,0 +1,65 @@
+.menu-list{
+    // 四個<li>總寬度492=80+332+80。
+    // 492/1296=0.379 =>38%
+    width: 38%;
+    li{
+        width: 100%;
+        text-align: center;
+        @include small {
+            width: 50%;
+            border: 1px solid white;
+            background-color: #AA0601;
+        } 
+    }
+    a:hover{
+        background-color: yellow;
+    }
+    @include medium {
+        // 492/696=0.706 =>71%
+        width: 71%;
+    }
+    @include small {
+        position: absolute;
+        // header區塊高度80px，(80-眼鏡logo實際高度49) / 2 = 15.5，表示header區塊高度
+        // 還少15.5，要從logo去上下推出15.5px，取整數=16px (續)
+        top: 80px;
+        width: 100%;
+    }
+}
+
+.menu-a{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    @include small {
+        // 自行設推擠上下的值
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+}
+
+.logo{
+    width: 80px;
+    &:hover{
+        transform: scale(110%);
+        transition: all 0.3s;
+    }
+    @include small {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+}
+
+header{
+    @include small {
+        position: relative;
+    }
+    .flexbox-sb{
+        @include small {
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center; 
+        }
+    }
+}
+
+

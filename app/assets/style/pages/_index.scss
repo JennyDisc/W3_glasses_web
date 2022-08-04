@@ -1,0 +1,304 @@
+// banner早春系列
+.banner{
+    background-image: url("../images/home-header.png");
+    background-size: cover;
+    @include medium {
+        background-image: url("../images/home-header-sm.png");
+        background-position: center center;
+    }
+}
+
+h1{
+    font-size: 64px;
+    @include small {
+        font-size: 24px;
+        padding-bottom: 8px;
+    }
+}
+
+.title-banner{
+    padding-top: 296px;
+    padding-bottom: 296px;
+    @include small {
+        padding-top: 216px;
+        padding-bottom: 144px; 
+    }
+    h3{
+        @include small {
+            font-size: 16px;
+        }
+    }
+}
+
+.button{
+    background: #AA0601;
+    border: 0;
+    padding: 6px 12px;
+    cursor: pointer;
+    &:hover{
+        background: pink;
+        color: black;
+    }
+}
+
+// brand品牌優點
+.brand-block h2{
+    margin-bottom: 24px;
+    @include small {
+        font-size: 24px;
+    }
+}
+
+.brand-menu{
+    @include small {
+        margin-bottom: -24px;
+    }
+    li{
+    // /寫法1：卡片間距24*3=72，用calc去運算=(1296-72)/4=306
+    // 寫法2：306/1296=0.2361 =>24%
+    width: calc((100% - 72px) / 4);
+    @include medium {
+        // 寫法1：卡片間距24*1=24，用calc去運算=
+        // (696-24)/2=336
+        // 寫法2：336/696=0.4827 =>48%
+        width: calc((100% - 24px) / 2);
+    }
+    @include small {
+        width: 100%;
+        margin-bottom: 24px;
+        padding-right: 0;
+    }
+    }
+    @include medium {
+        flex-wrap: wrap;
+    }
+    &-mb-1{
+        @include medium {
+            margin-bottom: 48px;
+        }
+    }
+    &-mb-2{
+        @include medium {
+            margin-bottom: 24px;
+        }
+    }
+    img{
+        width: 100px;
+        margin-bottom: 16px;
+    }
+}
+
+.brand{
+    @include small {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+// classic經典系列鏡框
+.classic{
+    &-menu{
+        @include medium {
+            flex-wrap: wrap;
+            // 336/696=0.4827 =>48%
+            width: 48%;
+            margin: 0 auto;
+            margin-bottom: -24px; 
+        }
+        @include small {
+            width: 100%;
+        }
+        li{
+            // 416/1296=0.320 =>32%
+            width: 32%;
+            @include medium {
+                width: 100%;
+                padding-bottom: 24px;
+            }
+        }
+    }
+    h2{
+        @include small {
+            font-size: 24px;
+        }
+    }
+    @include small {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+// design聯名設計鏡框
+.design{
+    background-image: url("../images/index-bg.png");
+    background-size: cover;
+    @include medium {
+        background-image: url("../images/index-bg-sm.png");
+    }
+    @include small {
+        padding-top: 40px;
+        padding-bottom: 40px
+    }
+    &-menu{
+        @include medium {
+            flex-wrap: wrap;
+            display: block;
+        }
+        a{
+            background-color: white;
+            padding: 8px 0; 
+        }
+        li{
+            @include medium {
+                width: 100%;
+            }
+            &:nth-child(1){
+                @include medium {
+                    padding-bottom: 24px;  
+                }
+            }
+        }
+    }
+    h2{
+        @include small {
+            font-size: 24px;
+        }
+    }
+}
+
+// recommend客戶推薦
+.recommend{
+    @include small {
+        padding-top: 40px;
+        padding-bottom: 40px
+    }
+    &-menu{
+        li{
+            // 寫法1：卡片間距24*3=72，用calc去運算=(1296-72)/4=306
+            // 寫法2：306/1296=0.2361 =>24%
+            width: calc((100% - 72px) / 4);
+            border: 1px solid #DEE2E6;
+            border-radius: 4px;
+            box-shadow: 0 2px 6px #00000029;
+            @include medium {
+                // 寫法1：卡片間距24*1=24，用calc去運算=(696-24)/2=336
+                // 寫法2：336/696=0.4798 =>48%
+                width: 48%;
+                margin-bottom: 24px;
+            }
+            @include small {
+                width: 100%;
+                margin-bottom: 16px;
+            }
+        }
+        @include medium {
+            flex-wrap: wrap;
+            margin-bottom: -24px;
+        }
+        @include small {
+            margin-bottom: -16px;
+        }
+        img{
+            @include medium {
+                width: 100%;
+            }
+        }
+    } 
+    &-card{
+        height: 205px; 
+    }
+    h2{
+        @include small {
+            font-size: 24px;  
+        } 
+    }
+}
+
+.dist-plr-16 .dist-mb-48{
+    @include medium {
+        margin-bottom: 72px;
+    }
+}
+
+// customer聯絡我們
+form{
+    // 636/1296=0.4907 =>49%
+    width: 49%;
+    margin: 0 auto;
+    @include medium {
+        // 576/696=0.827 =>83%
+        width: 83%;
+    }
+    p{
+        margin-bottom: 24px;
+    }
+}
+
+// <label>是行內元素
+.input-label{
+    display: inline-block;
+}
+
+.customer{
+    &-input{
+        width: 100%;
+        border: 1px solid black;
+    }
+    &-text{
+        width: 100%;
+        // 消除表格右下角樣式
+        resize: none;
+        border: 1px solid black;
+    }
+    &-info {
+        form p{
+            @include medium {
+                font-size: 16px;
+            } 
+        }
+        h2{
+            @include small {
+                font-size: 24px;
+            }
+        }
+    }
+    @include small {
+        padding-top: 40px;
+        padding-bottom: 40px
+    }
+}
+
+// <input>是行內元素
+.submit-button{
+    display: block;
+    margin: 0 auto;
+    background-color: #AA0601;
+    // 消除input:button的外框邊線
+    border: 0;
+    // 送出鈕不要寫死，要用padding，因為解析度變小時，按鈕不會隨之縮小。父層<form>寬度636，上/下推擠16/636=0.025；左/右推擠176/636=0.276
+    padding: 2.5% 28%;
+    // 游標停在按鈕上變成手指圖案
+    cursor: pointer;
+    @include medium {
+        // 父層<form>寬度576，左/右推擠136/576=
+        // 0.236，24.5%比較接近按鈕寬336
+        padding-left: 24.5%;
+        padding-right: 24.5%;  
+    }
+    @include small {
+        width: 100%;
+    }
+    &:hover{
+        background: pink;
+        color: black;
+    }
+}
+
+.checkbox-block{
+    @include small {
+        margin-bottom: 24px;
+    }
+}
+
+
+

@@ -1,0 +1,124 @@
+.footer-menu{
+    li{
+        margin-right: 48px;
+    }
+    a{
+        padding: 12px 0;
+    }
+    @include small {
+        display: none;
+    }
+}
+
+.icon{
+    padding-top: 48px;
+    img{
+        width: 48px;
+        @include medium {
+            width: 40px;
+        }
+        @include small {
+            width: 24px;
+        }
+        &:hover{
+            transform: scale(110%);
+            transition: all 0.3s;
+        }  
+    }
+    li{
+        margin-left: 32px;
+        @include medium {
+            margin-left: 16px;
+        }
+        @include small {
+            margin-left: 8px;
+        }
+    }
+    @include small {
+        padding-top: 24px;
+    }
+}
+
+.footer-sider{
+    @include small {
+        padding-top: 24px; 
+    }
+}
+
+.connect{
+    margin-top: 24px;
+    margin-bottom: 32px;
+    &-icon{
+        display: flex;
+        a{
+            @include small {
+                font-size: 16px;
+            }
+        }
+    }
+    @include small {
+        margin-top: 0px;
+        margin-bottom: 24px;
+    }
+}
+
+.fa-solid{
+    font-size: 48px;
+    @include small {
+        font-size: 24px;
+    }
+}
+
+i{
+    padding-right: 16px;
+    @include small {  
+        padding-right: 8px;
+    }
+}
+
+.law-area{
+    border-top: 1px solid white;
+    @include small {  
+        display: block; 
+    }
+    a{
+        @include small {  
+            font-size: 16px;
+        }
+    }
+    p,ul{
+        margin-top: 32px;
+        margin-bottom: 32px; 
+        @include medium {  
+            margin-bottom: 40px;
+        }
+    }
+    ul{
+        @include small {  
+            display: inline-block;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    }
+    p{
+        @include small { 
+            margin-top: 16px;
+            margin-bottom: 0px;
+        }
+    }
+    li:nth-child(1){
+        margin-right: 48px;
+    }
+    li:nth-child(2){
+        @include small { 
+            margin-right: 48px;
+            padding-bottom: 24px;
+        }
+    }
+    li{
+        @include small { 
+            margin-top: 8px;
+        }
+    }
+}
+

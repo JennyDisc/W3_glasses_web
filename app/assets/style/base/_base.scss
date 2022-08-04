@@ -1,0 +1,19 @@
+// 全域設定start
+body{
+    line-height: 1.5;
+    font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+    color: #650300;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+    display: block;
+    
+    &:hover{
+    color: #650300;
+    transition:all 0.3s;
+    }
+}
+// 全域設定end
+
