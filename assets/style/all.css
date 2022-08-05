@@ -235,11 +235,11 @@ a {
       padding-bottom: 16px; } }
 
 @media (max-width: 767px) {
-  header {
+  nav {
     position: relative; } }
 
 @media (max-width: 767px) {
-  header .flexbox-sb {
+  nav .flexbox-sb {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-pack: center;
