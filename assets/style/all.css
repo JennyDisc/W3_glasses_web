@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -251,11 +252,32 @@ a {
 
 .banner {
   background-image: url("../images/home-header.png");
-  background-size: cover; }
+  background-size: cover;
+  /* 此區塊裡有內容，可以用內容推出高度。助教建議.banner背景圖片直接設定高度，不建議用title-banner內容來padding推出來 */
+  height: 787px; }
+  .banner .container {
+    /* 寫height: 100%會讓文字區塊高度同.banner 背景圖片height: 787px。如果不寫高度100%，文字區塊高度=內容高度 */
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    @media (max-width: 767px) {
+      .banner .container h3 {
+        font-size: 16px; } }
   @media (max-width: 992px) {
     .banner {
       background-image: url("../images/home-header-sm.png");
       background-position: center center; } }
+  @media (max-width: 767px) {
+    .banner {
+      /* 助教建議.banner背景圖片直接設定高度，396+選單高度72=468，不建議用.title-banner內容來padding推出來 */
+      height: 468px; } }
 
 h1 {
   font-size: 64px; }
@@ -263,17 +285,6 @@ h1 {
     h1 {
       font-size: 24px;
       padding-bottom: 8px; } }
-
-.title-banner {
-  padding-top: 296px;
-  padding-bottom: 296px; }
-  @media (max-width: 767px) {
-    .title-banner {
-      padding-top: 216px;
-      padding-bottom: 144px; } }
-  @media (max-width: 767px) {
-    .title-banner h3 {
-      font-size: 16px; } }
 
 .button {
   background: #AA0601;
