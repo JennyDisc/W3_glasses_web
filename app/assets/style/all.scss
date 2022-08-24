@@ -5,13 +5,13 @@
 @import './base/base' ;
 
 // 間距與flexbox設定
-@import './base/typography' ;
+@import './utils/typography' ;
 
 // 文字設定(字體大小、樣式)
 @import './base/fonts' ;
 
 // 背景顏色
-@import './base/colors' ;
+@import './utils/colors' ;
 
 // breakpoint設定
 @import './utils/mixins';

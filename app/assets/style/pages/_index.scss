@@ -2,9 +2,27 @@
 .banner{
     background-image: url("../images/home-header.png");
     background-size: cover;
+    /* 此區塊裡有內容，可以用內容推出高度。助教建議.banner背景圖片直接設定高度，不建議用title-banner內容來padding推出來 */
+    height: 787px;
+    .container{
+        /* 寫height: 100%會讓文字區塊高度同.banner 背景圖片height: 787px。如果不寫高度100%，文字區塊高度=內容高度 */
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        h3{
+            @include small {
+                font-size: 16px;
+            }
+        }
+    }
     @include medium {
         background-image: url("../images/home-header-sm.png");
         background-position: center center;
+    }
+    @include small {
+        /* 助教建議.banner背景圖片直接設定高度，396+選單高度72=468，不建議用.title-banner內容來padding推出來 */
+        height: 468px;
     }
 }
 
@@ -16,19 +34,19 @@ h1{
     }
 }
 
-.title-banner{
-    padding-top: 296px;
-    padding-bottom: 296px;
-    @include small {
-        padding-top: 216px;
-        padding-bottom: 144px; 
-    }
-    h3{
-        @include small {
-            font-size: 16px;
-        }
-    }
-}
+// .title-banner{
+//     padding-top: 296px;
+//     padding-bottom: 296px;
+//     @include small {
+//         padding-top: 216px;
+//         padding-bottom: 144px; 
+//     }
+//     h3{
+//         @include small {
+//             font-size: 16px;
+//         }
+//     }
+// }
 
 .button{
     background: #AA0601;

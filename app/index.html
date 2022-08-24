@@ -7,10 +7,14 @@ current: index
 
 
 <header class="banner">
-    <div class="container title-banner ta-r">
-        <h3 class="p-m">Promise-Desert 2020 早春系列</h3>
-        <h1 class="p-700">看得清，才能看得遠</h1>
-        <input type="button" value="立即購買" class="button p-xs p-500 p-c-w button-fm">
+    <div class="container">
+        <div class="ta-r">
+            <h3 class="p-m">Promise-Desert 2020 早春系列</h3>
+            <h1 class="p-700">看得清，才能看得遠</h1>
+            <!--  input 的按鈕寫法通常只用於表單內部，建議改用a 或 button 標籤 -->
+            <!-- <input type="button" value="立即購買" class="button p-xs p-500 p-c-w button-fm"> -->
+            <button class="button p-xs p-500 p-c-w button-fm">立即購買</button>
+        </div>
     </div>
 </header>
 
@@ -79,44 +83,42 @@ current: index
         </div>
     </section>
 
-    <article>
-        <div class="container recommend dist-pt-80 dist-pb-80">
-            <h2 class="p-l p-700 dist-mb-48 ta-c">顧客推薦</h2>
-            <ul class="recommend-menu flexbox-sb-s p-c-b">
-                <li>
-                    <img src="./assets/images/home-section5-1.png" alt="客戶大頭照">
-                    <div class="recommend-card dist-plr-16 dist-pt-16">
-                        <p class="p-500 dist-mb-8">Jessy</p>
-                        <p class="dist-mb-48">眼鏡品質優良，下次還會想來這邊購買！</p>
-                        <p class="p-xss dist-pb-16">2021/06/20</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="./assets/images/home-section5-2.png" alt="客戶大頭照">
-                    <div class="recommend-card dist-plr-16 dist-pt-16">
-                        <p class="p-500 dist-mb-8">凱倫</p>
-                        <p class="dist-mb-48">做工細緻、鏡架很輕盈，待久也不會覺得有負擔，推薦給大家！</p>
-                        <p class="p-xss dist-pb-16">2021/04/18</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="./assets/images/home-section5-3.png" alt="客戶大頭照">
-                    <div class="recommend-card dist-plr-16 dist-pt-16">
-                        <p class="p-500 dist-mb-8">悠悠</p>
-                        <p class="dist-mb-48">謝謝客服人員的詳細回答，成功買到了喜歡的眼鏡，下次會再回購！</p>
-                        <p class="p-xss dist-pb-16">2020/12/25</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="./assets/images/home-section5-4.png" alt="客戶大頭照">
-                    <div class="recommend-card dist-plr-16 dist-pt-16">
-                        <p class="p-500 dist-mb-8">Kyuan</p>
-                        <p class="dist-mb-48">服務很好，品質沒有任何問題，非常喜歡。</p>
-                        <p class="p-xss dist-pb-16">2020/10/31</p>
-                    </div>
-                </li>
-            </ul>
-        </div>
+    <article class="container recommend dist-pt-80 dist-pb-80">
+        <h2 class="p-l p-700 dist-mb-48 ta-c">顧客推薦</h2>
+        <ul class="recommend-menu flexbox-sb-s p-c-b">
+            <li>
+                <img src="./assets/images/home-section5-1.png" alt="客戶大頭照">
+                <div class="recommend-card dist-plr-16 dist-pt-16">
+                    <p class="p-500 dist-mb-8">Jessy</p>
+                    <p class="dist-mb-48">眼鏡品質優良，下次還會想來這邊購買！</p>
+                    <p class="p-xss dist-pb-16">2021/06/20</p>
+                </div>
+            </li>
+            <li>
+                <img src="./assets/images/home-section5-2.png" alt="客戶大頭照">
+                <div class="recommend-card dist-plr-16 dist-pt-16">
+                    <p class="p-500 dist-mb-8">凱倫</p>
+                    <p class="dist-mb-48">做工細緻、鏡架很輕盈，待久也不會覺得有負擔，推薦給大家！</p>
+                    <p class="p-xss dist-pb-16">2021/04/18</p>
+                </div>
+            </li>
+            <li>
+                <img src="./assets/images/home-section5-3.png" alt="客戶大頭照">
+                <div class="recommend-card dist-plr-16 dist-pt-16">
+                    <p class="p-500 dist-mb-8">悠悠</p>
+                    <p class="dist-mb-48">謝謝客服人員的詳細回答，成功買到了喜歡的眼鏡，下次會再回購！</p>
+                    <p class="p-xss dist-pb-16">2020/12/25</p>
+                </div>
+            </li>
+            <li>
+                <img src="./assets/images/home-section5-4.png" alt="客戶大頭照">
+                <div class="recommend-card dist-plr-16 dist-pt-16">
+                    <p class="p-500 dist-mb-8">Kyuan</p>
+                    <p class="dist-mb-48">服務很好，品質沒有任何問題，非常喜歡。</p>
+                    <p class="p-xss dist-pb-16">2020/10/31</p>
+                </div>
+            </li>
+        </ul>
     </article>
 
     <section class="customer dist-pt-80 dist-pb-80 bg-p">
