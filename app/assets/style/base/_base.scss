@@ -3,6 +3,8 @@ body{
     line-height: 1.5;
     font-family: 'Roboto', 'Noto Sans TC', sans-serif;
     color: #650300;
+    // 助教建議在body加上overflow-x: hidden;，確保頁面在圖片滾動進入之前不會因此出現x軸
+    overflow-x: hidden;
 }
 
 a{
