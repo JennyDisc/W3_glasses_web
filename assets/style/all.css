@@ -58,7 +58,8 @@ img {
 body {
   line-height: 1.5;
   font-family: 'Roboto', 'Noto Sans TC', sans-serif;
-  color: #650300; }
+  color: #650300;
+  overflow-x: hidden; }
 
 a {
   text-decoration: none;
