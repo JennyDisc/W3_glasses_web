@@ -1,4 +1,8 @@
 // 間距start
+.dist-mr-8{
+    margin-right: 8px;
+}
+
 .dist-mb-8{
     margin-bottom: 8px;
 }
@@ -36,6 +40,10 @@
     padding-top: 80px;
 }
 
+.dist-pb-32{
+    padding-bottom: 32px;
+}
+
 .dist-pb-80{
     padding-bottom: 80px;
 }
@@ -46,6 +54,20 @@
 // 間距end
 
 // flexbox start
+.flexbox{
+    display: flex;
+}
+
+.flexbox-sc-n{
+    display: flex;
+    justify-content: center;
+}
+
+.flexbox-sb-n{
+    display: flex;
+    justify-content: space-between;
+}
+
 .flexbox-sb{
     display: flex;
     justify-content: space-between;

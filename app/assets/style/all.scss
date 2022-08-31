@@ -1,5 +1,5 @@
 // css reset
-@import './base/reset' ;
+@import './utils/reset' ;
 
 // 全域設定
 @import './base/base' ;
@@ -8,7 +8,7 @@
 @import './utils/typography' ;
 
 // 文字設定(字體大小、樣式)
-@import './base/fonts' ;
+@import './utils/fonts' ;
 
 // 背景顏色
 @import './utils/colors' ;
@@ -24,8 +24,9 @@
 // nav頁
 @import './layout/nav' ;
 
-// 分頁：index
+// 分頁
 @import './pages/index' ;
+@import './pages/optical';
 
 // footer頁
 @import './layout/footer' ;

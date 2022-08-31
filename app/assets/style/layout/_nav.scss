@@ -1,5 +1,5 @@
 .menu-list{
-    // 四個<li>總寬度492=80+332+80。
+    // 四個<li>總寬度492=設計稿上一個<li>寬80+第一個與最後一個距離332+最後一個<li>寬80。
     // 492/1296=0.379 =>38%
     width: 38%;
     li{
@@ -42,6 +42,7 @@
         transform: scale(110%);
         transition: all 0.3s;
     }
+    // logo圖片高度=開發人員看48+推擠(16+16)=80
     @include small {
         padding-top: 16px;
         padding-bottom: 16px;
@@ -51,6 +52,8 @@
 nav{
     @include small {
         position: relative;
+        // 因為<nav>底下的ul選單設了position: absolute造成這個區塊會浮動，如果沒有把<nav>向下推擠，index頁面.banner的背景圖片會被選單給覆蓋。因為選單浮動了，造成下面區塊向上推，彌補空的部分。112是從開發人員看四個<li>總高度而得
+        margin-bottom: 112px;
     }
     .flexbox-sb{
         @include small {

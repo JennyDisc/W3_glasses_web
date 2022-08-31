@@ -1,0 +1,133 @@
+nav{
+    // 因為<nav>底下的ul選單設了position: absolute造成這個區塊會浮動，如果沒有把<nav>向下推擠，index頁面的.banner的背景圖片會被選單給覆蓋。因為選單浮動了，造成下面區塊向上推，彌補空的部分。optical區塊沒有背景圖片，可以在.optical區塊推擠就行。所以取消index頁面的推擠
+    @include small {
+        margin-bottom: 0;
+    }
+}
+
+.optical{
+    &>ul{
+        max-width: 1296px;
+        margin: 0 auto;
+        @include medium {
+            font-size: 24px;
+        }
+        @include small {
+            font-size: 16px;
+        }
+    }
+    // 開發人員看四個<li>總高度=112
+    @include small {
+        padding-top: 112px;
+    }
+    .nav-list{
+        li{
+            border: 1px solid #DCDCDC;
+            position: relative;
+            width: 33.34%;
+            height: 96px;
+            @include medium {
+                height: 68px;
+            }
+            a{
+                color:black;
+                padding: 24px 0px;
+                &:hover::after{
+                    content: "";
+                    position: absolute;
+                    left:0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 8px;
+                    border-bottom: 8px solid #AA0601;
+                }
+                @include medium {
+                    // 自行設推擠上下的值
+                    padding: 20px 0px;
+                }
+            }
+        }
+    }
+}
+
+.optical-top-img{ 
+    .left{
+        background-image: url("../images/product-header-1.png");
+        background-size: cover;
+        background-position: center center;
+        height: 296px;
+        width: 100%;
+        @include medium {
+            background-image: url("../images/product-header-sm-1.png");
+        }
+    }
+    .right{
+        background-image: url("../images/product-header-2.png");
+        background-size: cover;
+        background-position: center center;
+        height: 296px;
+        width: 100%;
+        @include medium {
+            background-image: url("../images/product-header-sm-2.png");
+        }
+    }
+}
+
+.optical-main{
+    @include small {
+        padding-top: 40px;
+        padding-bottom: 64px;
+    }
+    &>h3{
+        padding-bottom: 24px;
+    }
+    .optical-block{
+        flex-wrap: wrap;
+        &>li{
+        // /寫法1：卡片間距24*3=72，用calc去運算=(1296-72)/4=306
+        // 寫法2：306/1296=0.2361 =>24%
+        width: calc((100% - 72px) / 4);
+        margin-bottom: 80px;  
+        @include medium {
+            width: calc((100% - 24px) / 2);
+        }
+        @include small {
+            width: 100%;
+            margin-bottom: 24px;
+        }
+        }
+        &>li:nth-last-child(1){
+            @include small {
+                width: 100%;
+                margin-bottom: 64px;
+            }
+        }
+        img{
+            // 原圖太小，手機板下圖片無法滿版。故設定width: 100%滿版
+            @include small {
+                width: 100%;
+            }
+        }
+    }
+    .optical-pagination{
+        li{
+            border: 1px solid #555555;
+            a{
+                color: #555555;
+                padding: 12px 16px;
+                &:hover{
+                    background: #000000;
+                    color: white;
+                }
+            }
+            &:nth-child(1) a{
+                padding: 12px 12px;
+            }
+            &:nth-last-child(1) a{
+                padding: 12px 12px;
+            }
+        }    
+    }
+}
+
+

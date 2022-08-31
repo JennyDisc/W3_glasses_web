@@ -11,8 +11,16 @@
     font-size: 24px;
 }
 
+.p-xm{
+    font-size: 32px;
+}
+
 .p-m{
     font-size: 36px;
+}
+
+.p-xl{
+    font-size: 42px;
 }
 
 .p-l{
@@ -42,6 +50,12 @@
 .p-c-r{
     color: #AA0601;
 }
+
+// 字型start
+.font-noto{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+// 字型end
 
 // 對button按鈕設定字型
 .button-fm{
