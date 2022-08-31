@@ -18,6 +18,7 @@
         // 492/696=0.706 =>71%
         width: 71%;
     }
+    // 手機板時ul>li選單用相對定位方式，定在<nav>裡logo圖80px高度之下緊接著
     @include small {
         position: absolute;
         // nav區塊高度80px

@@ -18,6 +18,10 @@
 
 // container設定
 @import './components/frame' ;
+// 分頁
+@import './components/pagination';
+// 次選單
+@import './components/nav-menu';
 
 
 
@@ -27,6 +31,7 @@
 // 分頁
 @import './pages/index' ;
 @import './pages/optical';
+@import './pages/sunglasses';
 
 // footer頁
 @import './layout/footer' ;
