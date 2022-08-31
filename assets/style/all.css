@@ -71,6 +71,9 @@ a {
     -o-transition: all 0.3s;
     transition: all 0.3s; }
 
+.dist-mr-8 {
+  margin-right: 8px; }
+
 .dist-mb-8 {
   margin-bottom: 8px; }
 
@@ -99,11 +102,35 @@ a {
 .dist-pt-80 {
   padding-top: 80px; }
 
+.dist-pb-32 {
+  padding-bottom: 32px; }
+
 .dist-pb-80 {
   padding-bottom: 80px; }
 
 .dist-button {
   padding: 6px 12px; }
+
+.flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.flexbox-sc-n {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.flexbox-sb-n {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
 .flexbox-sb {
   display: -webkit-box;
@@ -136,8 +163,14 @@ a {
 .p-s {
   font-size: 24px; }
 
+.p-xm {
+  font-size: 32px; }
+
 .p-m {
   font-size: 36px; }
+
+.p-xl {
+  font-size: 42px; }
 
 .p-l {
   font-size: 48px; }
@@ -160,6 +193,9 @@ a {
 .p-c-r {
   color: #AA0601; }
 
+.font-noto {
+  font-family: 'Noto Sans TC', sans-serif; }
+
 .button-fm {
   font-family: 'Noto Sans TC', sans-serif; }
 
@@ -180,6 +216,18 @@ a {
 
 .bg-p {
   background-color: #FBF2F2; }
+
+.b-1color {
+  background: #5F3E2D;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px; }
+
+.b-2color {
+  background: #B75929;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px; }
 
 .container {
   max-width: 1320px;
@@ -238,7 +286,8 @@ a {
 
 @media (max-width: 767px) {
   nav {
-    position: relative; } }
+    position: relative;
+    margin-bottom: 112px; } }
 
 @media (max-width: 767px) {
   nav .flexbox-sb {
@@ -495,6 +544,109 @@ form {
 @media (max-width: 767px) {
   .checkbox-block {
     margin-bottom: 24px; } }
+
+@media (max-width: 767px) {
+  nav {
+    margin-bottom: 0; } }
+
+.optical > ul {
+  max-width: 1296px;
+  margin: 0 auto; }
+  @media (max-width: 992px) {
+    .optical > ul {
+      font-size: 24px; } }
+  @media (max-width: 767px) {
+    .optical > ul {
+      font-size: 16px; } }
+
+@media (max-width: 767px) {
+  .optical {
+    padding-top: 112px; } }
+
+.optical .nav-list li {
+  border: 1px solid #DCDCDC;
+  position: relative;
+  width: 33.34%;
+  height: 96px; }
+  @media (max-width: 992px) {
+    .optical .nav-list li {
+      height: 68px; } }
+  .optical .nav-list li a {
+    color: black;
+    padding: 24px 0px; }
+    .optical .nav-list li a:hover::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 8px;
+      border-bottom: 8px solid #AA0601; }
+    @media (max-width: 992px) {
+      .optical .nav-list li a {
+        padding: 20px 0px; } }
+
+.optical-top-img .left {
+  background-image: url("../images/product-header-1.png");
+  background-size: cover;
+  background-position: center center;
+  height: 296px;
+  width: 100%; }
+  @media (max-width: 992px) {
+    .optical-top-img .left {
+      background-image: url("../images/product-header-sm-1.png"); } }
+
+.optical-top-img .right {
+  background-image: url("../images/product-header-2.png");
+  background-size: cover;
+  background-position: center center;
+  height: 296px;
+  width: 100%; }
+  @media (max-width: 992px) {
+    .optical-top-img .right {
+      background-image: url("../images/product-header-sm-2.png"); } }
+
+@media (max-width: 767px) {
+  .optical-main {
+    padding-top: 40px;
+    padding-bottom: 64px; } }
+
+.optical-main > h3 {
+  padding-bottom: 24px; }
+
+.optical-main .optical-block {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .optical-main .optical-block > li {
+    width: calc((100% - 72px) / 4);
+    margin-bottom: 80px; }
+    @media (max-width: 992px) {
+      .optical-main .optical-block > li {
+        width: calc((100% - 24px) / 2); } }
+    @media (max-width: 767px) {
+      .optical-main .optical-block > li {
+        width: 100%;
+        margin-bottom: 24px; } }
+  @media (max-width: 767px) {
+    .optical-main .optical-block > li:nth-last-child(1) {
+      width: 100%;
+      margin-bottom: 64px; } }
+  @media (max-width: 767px) {
+    .optical-main .optical-block img {
+      width: 100%; } }
+
+.optical-main .optical-pagination li {
+  border: 1px solid #555555; }
+  .optical-main .optical-pagination li a {
+    color: #555555;
+    padding: 12px 16px; }
+    .optical-main .optical-pagination li a:hover {
+      background: #000000;
+      color: white; }
+  .optical-main .optical-pagination li:nth-child(1) a {
+    padding: 12px 12px; }
+  .optical-main .optical-pagination li:nth-last-child(1) a {
+    padding: 12px 12px; }
 
 .footer-menu li {
   margin-right: 48px; }
