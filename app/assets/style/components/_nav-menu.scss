@@ -10,10 +10,6 @@
             font-size: 16px;
         }
     }
-    // 開發人員看index四個<li>總高度=112
-    @include small {
-        padding-top: 112px;
-    }
     .nav-list{
         li{
             border: 1px solid #DCDCDC;

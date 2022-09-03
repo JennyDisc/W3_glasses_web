@@ -53,7 +53,7 @@
 nav{
     @include small {
         position: relative;
-        // 因為<nav>底下的ul選單設了position: absolute造成這個區塊會浮動，如果沒有把<nav>向下推擠，index頁面.banner的背景圖片會被選單給覆蓋。因為選單浮動了，造成下面區塊向上推，彌補空的部分。112是從開發人員看四個<li>總高度而得
+        // 因為<nav>底下的ul選單(.menu-list{})設了position: absolute造成<ul>這個區塊會浮動，而<nav>非<ul>區塊則無浮動問題，會實際佔有空間。為要解決<ul>浮動造成index頁面.下面區塊banner背景圖片會往上補空間，變成被<ul>覆蓋。所以要對未浮動區塊<nav>向下推擠112px(從開發人員看四個<li>總高度而得)
         margin-bottom: 112px;
     }
     .flexbox-sb{
