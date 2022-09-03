@@ -264,10 +264,6 @@ a {
     .nav-menu > ul {
       font-size: 16px; } }
 
-@media (max-width: 767px) {
-  .nav-menu {
-    padding-top: 112px; } }
-
 .nav-menu .nav-list li {
   border: 1px solid #DCDCDC;
   position: relative;
@@ -594,10 +590,6 @@ form {
 @media (max-width: 767px) {
   .checkbox-block {
     margin-bottom: 24px; } }
-
-@media (max-width: 767px) {
-  nav {
-    margin-bottom: 0; } }
 
 .optical-top-img .left {
   background-image: url("../images/product-header-1.png");
